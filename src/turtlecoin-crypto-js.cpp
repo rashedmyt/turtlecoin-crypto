@@ -140,63 +140,10 @@ EMSCRIPTEN_BINDINGS(signatures)
 {
     function("cn_fast_hash", &Core::Cryptography::cn_fast_hash);
 
-    function("cn_slow_hash_v0", &Core::Cryptography::cn_slow_hash_v0);
-    function("cn_slow_hash_v1", &Core::Cryptography::cn_slow_hash_v1);
-    function("cn_slow_hash_v2", &Core::Cryptography::cn_slow_hash_v2);
-
-    function("cn_lite_slow_hash_v0", &Core::Cryptography::cn_lite_slow_hash_v0);
-    function("cn_lite_slow_hash_v1", &Core::Cryptography::cn_lite_slow_hash_v1);
-    function("cn_lite_slow_hash_v2", &Core::Cryptography::cn_lite_slow_hash_v2);
-
-    function("cn_dark_slow_hash_v0", &Core::Cryptography::cn_dark_slow_hash_v0);
-    function("cn_dark_slow_hash_v1", &Core::Cryptography::cn_dark_slow_hash_v1);
-    function("cn_dark_slow_hash_v2", &Core::Cryptography::cn_dark_slow_hash_v2);
-
-    function("cn_dark_lite_slow_hash_v0", &Core::Cryptography::cn_dark_lite_slow_hash_v0);
-    function("cn_dark_lite_slow_hash_v1", &Core::Cryptography::cn_dark_lite_slow_hash_v1);
-    function("cn_dark_lite_slow_hash_v2", &Core::Cryptography::cn_dark_lite_slow_hash_v2);
-
-    function("cn_turtle_slow_hash_v0", &Core::Cryptography::cn_turtle_slow_hash_v0);
-    function("cn_turtle_slow_hash_v1", &Core::Cryptography::cn_turtle_slow_hash_v1);
-    function("cn_turtle_slow_hash_v2", &Core::Cryptography::cn_turtle_slow_hash_v2);
-
-    function("cn_turtle_lite_slow_hash_v0", &Core::Cryptography::cn_turtle_lite_slow_hash_v0);
-    function("cn_turtle_lite_slow_hash_v1", &Core::Cryptography::cn_turtle_lite_slow_hash_v1);
-    function("cn_turtle_lite_slow_hash_v2", &Core::Cryptography::cn_turtle_lite_slow_hash_v2);
-
-    function("cn_soft_shell_slow_hash_v0", &cn_soft_shell_slow_hash_v0);
-    function("cn_soft_shell_slow_hash_v1", &cn_soft_shell_slow_hash_v1);
-    function("cn_soft_shell_slow_hash_v2", &cn_soft_shell_slow_hash_v2);
-
-    function("chukwa_slow_hash", &Core::Cryptography::chukwa_slow_hash);
-
     function("tree_depth", &Core::Cryptography::tree_depth);
     function("tree_hash", &Core::Cryptography::tree_hash);
     function("tree_branch", &Core::Cryptography::tree_branch);
     function("tree_hash_from_branch", &Core::Cryptography::tree_hash_from_branch);
 
-    function("generateRingSignatures", &generateRingSignatures);
-    function("checkRingSignature", &Core::Cryptography::checkRingSignature);
-    function(
-        "generatePrivateViewKeyFromPrivateSpendKey", &Core::Cryptography::generatePrivateViewKeyFromPrivateSpendKey);
-    function("generateViewKeysFromPrivateSpendKey", &generateViewKeysFromPrivateSpendKey);
-    function("generateKeys", &generateKeys);
-    function("generateDeterministicSubwalletKeys", &generateDeterministicSubwalletKeys);
-    function("checkKey", &Core::Cryptography::checkKey);
-    function("secretKeyToPublicKey", &secretKeyToPublicKey);
-    function("generateKeyDerivation", &generateKeyDerivation);
-    function("derivePublicKey", &derivePublicKey);
-    function("deriveSecretKey", &deriveSecretKey);
-    function("underivePublicKey", &underivePublicKey);
-    function("generateSignature", &Core::Cryptography::generateSignature);
-    function("checkSignature", &Core::Cryptography::checkSignature);
-    function("generateKeyImage", &Core::Cryptography::generateKeyImage);
-    function("scalarmultKey", &Core::Cryptography::scalarmultKey);
-    function("hashToEllipticCurve", &Core::Cryptography::hashToEllipticCurve);
-    function("scReduce32", &Core::Cryptography::scReduce32);
-    function("hashToScalar", &Core::Cryptography::hashToScalar);
-
     register_vector<std::string>("VectorString");
-
-    value_object<Keys>("Keys").field("SecretKey", &Keys::SecretKey).field("PublicKey", &Keys::PublicKey);
 }
